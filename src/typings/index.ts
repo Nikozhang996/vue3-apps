@@ -20,17 +20,17 @@ export interface ILessons {
   list: ILessons[];
 }
 
-// 主页状态
-export interface IHomeState {
-  currentCategory: CATOGORY_TYPES;
-  sliders: ISlider[];
-  lessons: ILessons;
-}
-
 // 导出元祖
 export enum CATOGORY_TYPES {
   ALL,
   REACT,
   VUE,
   NODE,
+}
+
+// 主页状态
+export interface IHomeState {
+  currentCategory: CATOGORY_TYPES;
+  sliders: ISlider[];
+  lessons: ILessons;
 }
