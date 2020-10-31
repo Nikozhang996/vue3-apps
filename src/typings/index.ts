@@ -1,4 +1,4 @@
-export interface Ilesson {
+export interface Lesson {
   title: string;
   video: string;
   poster: string;
@@ -7,17 +7,17 @@ export interface Ilesson {
 }
 
 // 类别接口
-export interface ISlider {
+export interface Slider {
   url: string;
 }
 
 // 课程接口
-export interface ILessons {
+export interface Lessons {
   hasMore: boolean;
   loading: boolean;
   offset: number;
   limit: number;
-  list: ILessons[];
+  list: Lessons[];
 }
 
 // 导出元祖
@@ -29,8 +29,8 @@ export enum CATOGORY_TYPES {
 }
 
 // 主页状态
-export interface IHomeState {
+export interface HomeState {
   currentCategory: CATOGORY_TYPES;
-  sliders: ISlider[];
-  lessons: ILessons;
+  sliders: Slider[];
+  lessons: Lessons;
 }

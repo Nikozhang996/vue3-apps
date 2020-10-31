@@ -6,7 +6,7 @@ import Vant from "vant";
 import "vant/lib/index.css";
 import "./vant-variables.less";
 
-import axios form './plugins/axios'
+// import axios from './plugins/axios'
 
 createApp(App)
   .use(Vant)

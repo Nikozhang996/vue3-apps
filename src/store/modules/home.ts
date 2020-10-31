@@ -1,8 +1,8 @@
-import { CATOGORY_TYPES, IHomeState } from "@/typings";
+import { CATOGORY_TYPES, HomeState } from "@/typings";
 import { Module } from "vuex";
-import { IGlobalState } from "..";
+import { GlobalState } from "..";
 
-const state: IHomeState = {
+const state: HomeState = {
   currentCategory: CATOGORY_TYPES.ALL,
   sliders: [],
   lessons: {
@@ -14,7 +14,7 @@ const state: IHomeState = {
   },
 };
 
-const home: Module<IHomeState, IGlobalState> = {
+const home: Module<HomeState, GlobalState> = {
   namespaced: true,
   state,
 };
