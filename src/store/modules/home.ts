@@ -1,6 +1,7 @@
-import { CATOGORY_TYPES, HomeState } from "@/typings";
 import { Module } from "vuex";
 import { GlobalState } from "..";
+import * as Types from "../action-types";
+import { CATOGORY_TYPES, HomeState, Lesson, Lessons, Slider } from "@/typings";
 
 const state: HomeState = {
   currentCategory: CATOGORY_TYPES.ALL,
@@ -10,13 +11,15 @@ const state: HomeState = {
     loading: false,
     offset: 0,
     limit: 5,
-    list: [],
-  },
+    list: []
+  }
 };
 
 const home: Module<HomeState, GlobalState> = {
   namespaced: true,
   state,
+  mutations:{},
+  actions:{},
 };
 
 export default home;
