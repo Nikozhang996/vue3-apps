@@ -1,5 +1,4 @@
 <template>
-  <div>{{ category }}</div>
   <home-header
     :category="category"
     @set-current-category="setCurrentCategory"
