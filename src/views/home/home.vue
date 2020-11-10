@@ -4,10 +4,25 @@
     @set-current-category="setCurrentCategory"
   ></home-header>
 
+  <!--home-container-->
   <div class="home-container" ref="HomeContainer">
-    <home-swiper></home-swiper>
+    <!--轮播图-->
+    <!-- 轮播图 -->
+    <Suspense>
+      <template #default>
+        <home-swiper></home-swiper>
+      </template>
+      <template #fallback>
+        <div>loading...</div>
+      </template>
+    </Suspense>
+
+    <!--课程列表-->
+    <home-list :lesson-list="lessonList"></home-list>
+
+    <div v-if="isLoading">正在加载....</div>
+    <div v-if="!hasMore">我是有底线的....</div>
   </div>
-  <home-list></home-list>
 </template>
 
 <script lang="ts">
@@ -86,4 +101,3 @@ export default defineComponent({
 </script>
 
 <style lang="scss" scoped></style>
-

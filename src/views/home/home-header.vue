@@ -35,7 +35,6 @@ export default defineComponent({
 
     // methods
     function handleChange(value: CATOGORY_TYPES) {
-      console.log(value);
       context.emit("set-current-category", value);
     }
 
