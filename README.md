@@ -13,6 +13,12 @@ https://gitee.com/jw-speed/zhufeng-public/tree/master/zhufeng-ketang-ts-2
 - [ ] createWebHistory
 - [ ] RouteRecordRaw
 - [ ] createStore
+- [ ] useStore
+- [ ] defineComponent
 - [ ] 新版keep-alive
+- [ ] Suspense
+- [ ] template #default
+- [ ] reactive
+- [ ] toRefs
 
 ### 收获

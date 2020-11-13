@@ -16,8 +16,8 @@ export default defineComponent({
   props: {
     category: {
       type: Number as PropType<CATOGORY_TYPES>,
-      default: 0,
-    },
+      default: 0
+    }
   },
   emits: ["set-current-category"],
   setup(props, context) {
@@ -29,8 +29,8 @@ export default defineComponent({
         { text: "全部课程", value: CATOGORY_TYPES.ALL },
         { text: "react课程", value: CATOGORY_TYPES.REACT },
         { text: "vue课程", value: CATOGORY_TYPES.VUE },
-        { text: "node课程", value: CATOGORY_TYPES.NODE },
-      ],
+        { text: "node课程", value: CATOGORY_TYPES.NODE }
+      ]
     });
 
     // methods
@@ -40,8 +40,8 @@ export default defineComponent({
 
     return {
       ...toRefs(state),
-      handleChange,
+      handleChange
     };
-  },
+  }
 });
 </script>
