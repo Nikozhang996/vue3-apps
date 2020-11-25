@@ -10,13 +10,13 @@ https://beta.segmentfault.com/a/1190000038236423
 - [x] 元祖
 - [x] 断言
 - [ ] vue,vuex,vue-router 新版本各项 api
-- [ ] createApp
-- [ ] createRouter
-- [ ] createWebHistory
-- [ ] RouteRecordRawL
-- [ ] createStore
-- [ ] useStore
-- [ ] defineComponent
+- [x] createApp，创建一个VUE应用实例，可以初始化默认全局参数
+- [x] createRouter，`import { createRouter, createWebHistory } from 'vue-router'`
+- [x] createWebHistory，创建一个History路由
+- [x] RouteRecordRaw，`const routes: RouteRecordRaw[] = []`，定义路由Item Type
+- [x] createStore，创建一个VUEX实例
+- [x] useStore，创建一个已生成的store
+- [x] defineComponent，defineComponent没有太多实际用途，主要是为了让TS类型提示变得友好一点。
 - [ ] 新版 keep-alive
 - [ ] Suspense
 - [ ] template #default
@@ -29,11 +29,12 @@ https://beta.segmentfault.com/a/1190000038236423
 - [x] toRefs，对传入的对象都转化为响应式数据
 - [x] toRaw，获取原始数据
 - [x] markRaw，创建一个不被监听响应式的数据
-- [ ] provide && inject，使用方法的形式实现依赖注入
-- [ ] watch && watchEffect
-- [ ] setup 方法，初始化方法，用来实现
-- [ ] getCurrentInstance，获取当前实例
-- [ ] 各生命周期，新版生命周期需要先解构引入，再传入回调方式
+- [x] provide && inject，使用方法的形式实现依赖注入
+- [x] watch && watchEffect
+- [x] setup 方法，初始化方法，用来实现，默认有props,context两参数
+- [x] getCurrentInstance，获取当前实例
+- [x] 各生命周期，新版生命周期需要先解构引入，再传入回调方式
+
 
 ### 收获
 

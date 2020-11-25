@@ -12,33 +12,28 @@
 </template>
 
 <script lang="ts">
-import { onMounted, reactive, ref, toRef, toRefs } from "vue";
+import { defineComponent, onMounted, reactive, ref, toRef, toRefs } from "vue";
 
-export default {
+export default defineComponent({
   name: "Demo",
   setup(props: any, context: any) {
-    const temp = { count: 0 };
-
-    const count = toRefs(temp);
-
-    const el = ref(null);
+    let count = 0;
+    const el = ref<HTMLElement | any>(null);
 
     onMounted(() => {
-      console.log(el.value);
+      console.log(el.value.innerText);
     });
 
     return {
       el,
       count,
       handleMddClick() {
-        count.count.value--;
-        console.log(count.count.value);
+        count--;
       },
       handleAddClick() {
-        count.count.value++;
-        console.log(count.count.value);
-      },
+        count++;
+      }
     };
-  },
-};
+  }
+});
 </script>
