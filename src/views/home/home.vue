@@ -7,6 +7,7 @@
 
   <!--home-container-->
   <div class="home-container" ref="HomeContainer">
+    {{ greetingUppercased }}
     <!--轮播图-->
     <Suspense>
       <template #default>
@@ -73,6 +74,26 @@ export default defineComponent({
     HomeHeader,
     HomeSwiper,
     HomeList
+  },
+  data() {
+    return {
+      message: "Vladimir"
+    };
+  },
+  computed: {
+    // 需要注释
+    greeting(): string {
+      return `Hello ${this.message}`;
+    },
+    // 在使用setter进行计算时，需要对getter进行注释
+    greetingUppercased: {
+      get(): string {
+        return this.greeting.toUpperCase();
+      },
+      set(newValue: string) {
+        this.message = newValue.toUpperCase();
+      }
+    }
   },
   setup() {
     // 获取vuex
