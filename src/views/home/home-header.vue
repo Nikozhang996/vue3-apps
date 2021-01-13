@@ -21,15 +21,14 @@ export default defineComponent({
   },
   emits: ["set-current-category"],
   setup(props, context) {
-    console.log(props);
-    console.log(context);
-
+    // 建立响应式数据
     const state = reactive({
       options: [
         { text: "全部课程", value: CATOGORY_TYPES.ALL },
         { text: "react课程", value: CATOGORY_TYPES.REACT },
         { text: "vue课程", value: CATOGORY_TYPES.VUE },
-        { text: "node课程", value: CATOGORY_TYPES.NODE }
+        { text: "node课程", value: CATOGORY_TYPES.NODE },
+        { text: "VLADIMIR", value: 4 }
       ]
     });
 

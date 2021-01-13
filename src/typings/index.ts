@@ -22,10 +22,10 @@ export interface Lessons {
 
 // 导出元祖
 export enum CATOGORY_TYPES {
-  ALL,
-  REACT,
-  VUE,
-  NODE,
+  ALL = 0,
+  REACT = 1,
+  VUE = 2,
+  NODE = 3
 }
 
 // 主页状态

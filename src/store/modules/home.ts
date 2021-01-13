@@ -11,8 +11,8 @@ const state: HomeState = {
     loading: false,
     offset: 0,
     limit: 5,
-    list: [],
-  },
+    list: []
+  }
 };
 
 const home: Module<HomeState, GlobalState> = {
@@ -32,7 +32,7 @@ const home: Module<HomeState, GlobalState> = {
       state.lessons.list = [...state.lessons.list, ...payload.list];
       state.lessons.hasMore = payload.hasMore;
       state.lessons.offset = state.lessons.offset + payload.list.length;
-    },
+    }
   },
   actions: {
     async [Types.SET_SLIDER_LIST]({ commit }) {
@@ -51,7 +51,7 @@ const home: Module<HomeState, GlobalState> = {
       commit(Types.SET_LOADING, true);
 
       const lessons: any = {
-        list: [],
+        list: []
       };
       /* const lessons = await getLessons<lessons>(
         state.currentCategory,
@@ -60,8 +60,8 @@ const home: Module<HomeState, GlobalState> = {
       */
       commit(Types.SET_LESSON_LIST, lessons);
       commit(Types.SET_LOADING, false);
-    },
-  },
+    }
+  }
 };
 
 export default home;

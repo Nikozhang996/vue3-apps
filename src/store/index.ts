@@ -11,6 +11,6 @@ export default createStore<GlobalState>({
   mutations: {},
   actions: {},
   modules: {
-    home,
-  },
+    home
+  }
 });

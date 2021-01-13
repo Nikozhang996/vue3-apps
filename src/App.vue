@@ -12,9 +12,3 @@
     </van-tabbar>
   </div>
 </template>
-
-<script>
-export default {
-  name: "app",
-};
-</script>

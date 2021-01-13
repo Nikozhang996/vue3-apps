@@ -1,4 +1,5 @@
 <template>
+  <!--home-header-->
   <home-header
     :category="category"
     @set-current-category="setCurrentCategory"
@@ -7,7 +8,6 @@
   <!--home-container-->
   <div class="home-container" ref="HomeContainer">
     <!--轮播图-->
-    <!-- 轮播图 -->
     <Suspense>
       <template #default>
         <home-swiper></home-swiper>
@@ -37,11 +37,13 @@ import * as Types from "@/store/action-types";
 import { useLoadMore } from "@/hooks/useLoadMore";
 
 function useCategory(store: Store<GlobalState>) {
+  // 使用computed建立计算属性
   const category = computed(function() {
     return store.state.home.currentCategory;
   });
 
   function setCurrentCategory(category: CATOGORY_TYPES) {
+    // vuex models home/代表home模块
     store.commit(`home/${Types.SET_CATEGORY}`, category);
   }
 
