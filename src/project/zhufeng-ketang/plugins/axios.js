@@ -27,5 +27,4 @@ _axios.interceptors.response.use(
   }
 );
 
-
 export default _axios;

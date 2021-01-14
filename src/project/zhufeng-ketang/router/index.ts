@@ -4,30 +4,30 @@ import Home from "../views/home/home.vue";
 const routes: Array<RouteRecordRaw> = [
   {
     path: "/",
-    redirect: "/home",
+    redirect: "/home"
   },
   {
     path: "/home",
     name: "Home",
-    component: Home,
+    component: Home
   },
   {
     path: "/mine",
     name: "Mine",
     component: () =>
-      import(/* webpackChunkName: "mine" */ "../views/mine/mine.vue"),
+      import(/* webpackChunkName: "mine" */ "../views/mine/mine.vue")
   },
   {
     path: "/profile",
     name: "Profile",
     component: () =>
-      import(/* webpackChunkName: "profile" */ "../views/profile/profile.vue"),
-  },
+      import(/* webpackChunkName: "profile" */ "../views/profile/profile.vue")
+  }
 ];
 
 const router = createRouter({
   history: createWebHistory(process.env.BASE_URL),
-  routes,
+  routes
 });
 
 export default router;

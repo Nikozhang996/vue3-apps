@@ -11,7 +11,7 @@ export function useLoadMore(
 
   function fn() {
     // 获取可视区域高度  卷取的高度  整个高度
-    /* 
+    /*
     let containerHeight = element.clientHeight;
     let scrollTop = element.scrollTop;
     let scrollHeight = element.scrollHeight;
@@ -41,6 +41,6 @@ export function useLoadMore(
 
   return {
     isLoading,
-    hasMore,
+    hasMore
   };
 }
