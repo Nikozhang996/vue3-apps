@@ -1,10 +1,10 @@
 import { createApp } from "vue";
 import axios from "axios";
-import router from "./project/zhihu/router";
-import store from "./project/zhihu/store";
+import router from "./router";
+import store from "./store";
 
-import App from "./project/zhihu/App.vue";
-// axios.defaults.baseURL = "http://api.vikingship.xyz/";
+import App from "./App.vue";
+axios.defaults.baseURL = "http://localhost:7001/api/";
 axios.interceptors.request.use(config => {
   store.commit("setLoading", true);
   store.commit("setError", { status: false, message: "" });

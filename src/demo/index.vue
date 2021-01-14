@@ -16,7 +16,7 @@ import { defineComponent, onMounted, reactive, ref, toRef, toRefs } from "vue";
 
 export default defineComponent({
   name: "Demo",
-  setup(props: any, context: any) {
+  setup(props, context) {
     let count = 0;
     const el = ref<HTMLElement | any>(null);
 
